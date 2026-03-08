@@ -97,7 +97,7 @@ Here **0 represents the empty tile**.
 ##  Author
 
 **Santosh Sah**  
-**23053926**
+**23053926**   
 B.Tech Computer Engineering  
 KIIT University
 ## If you like this project, consider giving it a star ⭐ on GitHub!
