@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <GridLayout
+        android:id="@+id/puzzleGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 9 Buttons will be added programmatically -->
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/heuristicText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heuristic: 0"
+        app:layout_constraintTop_toBottomOf="@id/puzzleGrid"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/movesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moves: 0"
+        app:layout_constraintTop_toBottomOf="@id/heuristicText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/efficiencyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/movesText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/hintButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hint"
+        app:layout_constraintTop_toBottomOf="@id/efficiencyText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/solveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Solve"
+        app:layout_constraintTop_toBottomOf="@id/efficiencyText"
+        app:layout_constraintStart_toEndOf="@id/hintButton" />
+
+    <Button
+        android:id="@+id/undoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Undo Last 2"
+        app:layout_constraintTop_toBottomOf="@id/efficiencyText"
+        app:layout_constraintStart_toEndOf="@id/solveButton" />
+
+    <Button
+        android:id="@+id/shuffleEasy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Easy"
+        app:layout_constraintTop_toBottomOf="@id/hintButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/shuffleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium"
+        app:layout_constraintTop_toBottomOf="@id/hintButton"
+        app:layout_constraintStart_toEndOf="@id/shuffleEasy" />
+
+    <Button
+        android:id="@+id/shuffleHard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hard"
+        app:layout_constraintTop_toBottomOf="@id/hintButton"
+        app:layout_constraintStart_toEndOf="@id/shuffleMedium" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
